@@ -1,0 +1,132 @@
+<DOCTYPE html>
+<!--
+    Name: Jimmy Nguyen
+    Date created: April 1, 2019
+    Date revised: April 1, 2019
+  -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="styles/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="checkInput.js"></script>
+<style>
+  label {
+  padding: 10px;
+  font-weight:bold;
+}
+.radioquestion label {
+  height:40px;
+  font-weight:normal;
+}
+.checkboxes label{
+  font-weight:normal;
+  display:inline-block;
+  margin-top:0;
+}
+</style>
+  <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <header>
+    <h1>Jimmy's Po'Boy</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+<nav>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link"  href="index.html" target="_self"><i class="fa fa-home"></i> Home</a>
+    <li class="nav-item">
+      <a class="nav-link" href="menu.html" target="_self">Menu</a>
+    <li class="nav-item">
+      <a class="nav-link active" href="contact.html" target="_self">Contact Us</a>
+  </ul>
+</nav>
+  <div class="clear-float"></div>
+  <!-- Noscript-->
+<noscript><p style="font-size:4em; font-weight:bold; color:red;">Disclaimer: This page is best viewed with Javascript enabled</p></noscript>
+
+  <!-- Forms -->
+  <form class="form-inline" id="theForm" action="submit.html" method="POST" onSubmit="return checkInput();">
+    <div class="container">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input class="form-control" placeholder="Add Name" type="text" id="name" name="name"/>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input class="form-control" placeholder="Add Email" type="text"  id="email" name="email"/>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input class="form-control" placeholder="Add Phone-Number" type="text" id="phone" name="phone"/>
+    </div>
+
+    <!-- Drop-down -->
+    <div class="form-group">
+      <label for="reason">Reason for Inquiry:</label>
+      <select class="form-control" id="reason" name="reason">
+        <option value="catering" selected>Catering</option>
+        <option value="Private Party">Private Party</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+      <!-- TextBox -->
+    <div class="form-group">
+      <label for="info">Additional Information:</label>
+      <textarea class="form-control" placeholder="Add Message" id="info" name="info"></textarea><br/>
+    </div>
+
+      <!-- Radio -->
+
+    <div class="form-group">
+      <label>Have you been to Jimmy's Po'Boy?</label>
+      <div class="radioquestion">
+
+      <label for="beenBefore">No<label>
+      <input  type="radio" id="beforechoice1" name="beenBefore" value="no" checked/>
+
+      <label for="beenBefore">Yes<label>
+      <input type="radio" id="beforechoice2" name="beenBefore" value="yes"/>
+    </div>
+    </div>
+
+
+
+      <!-- Checkbox -->
+    <div class="form-group">
+      <label>Best days to contact you:</label>
+      <div class="checkboxes">
+        <label>Mon</label>
+        <input class="form-control" type="checkbox" id="monday" name="bestDay" value="monday"/>
+        <label>Tues</label>
+        <input class="form-control" type="checkbox" id="tuesday" name="bestDay" value="tuesday"/>
+        <label>Wed</label>
+        <input class="form-control" type="checkbox" id="wednesday" name="bestDay" value="wednesday"/>
+        <label>Thurs</label>
+        <input class="form-control" type="checkbox" id="thursday" name="bestDay" value="thursday"/>
+        <label>Fri</label>
+        <input class="form-control" type="checkbox" id="friday" name="bestDay" value="friday"/>
+      </div>
+    </div>
+
+      <!-- Submit -->
+    <button type="submit" class="btn btn-default">Send Request</button>
+    </div>
+    </form>
+
+  <footer>
+      <p>3459 Rodney Lane Lewisville, TX, 75077</p>
+      <p>(972)359-2398</p>
+  </footer>
+  <script src="styles/js/jquery-3.3.1.min.js"></script>
+  <script src="styles/js/popper.min.js"></script>
+  <script src="styles/js/bootstrap.min.js"></script>
+  </body>
+  </html>
